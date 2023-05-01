@@ -144,10 +144,10 @@ while running:
         playerX = 736
 
     # Enemy Movement
-    for i in range(num_of_enemies):
-
-        # Game Over
-        if enemyY[i] > 440:
+    
+    for i, (enemy_x, enemy_y) in enumerate(zip(enemyX, enemyY)):
+    # Game Over
+        if enemy_y > 440:
             for j in range(num_of_enemies):
                 enemyY[j] = 2000
             game_over_text()
