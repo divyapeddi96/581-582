@@ -37,6 +37,7 @@ playerX_change = 0
 enemyImg = []
 enemyX = []
 enemyY = []
+ENEMY_SPEED = 4
 enemyX_change = []
 enemyY_change = []
 num_of_enemies = 6
