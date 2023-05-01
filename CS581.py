@@ -52,7 +52,7 @@ for i in range(num_of_enemies):
 # Ready - You can't see the bullet on the screen
 # Fire - The bullet is currently moving
 
-bulletImg = pygame.image.load('bullet.png')
+bulletImg = pygame.image.load(r"C:\Users\divya\OneDrive\Desktop\Spring 2023\CS581\bullet.png").convert()
 bulletX = 0
 bulletY = 480
 bulletX_change = 0
@@ -124,7 +124,7 @@ while running:
                 playerX_change = 5
             if event.key == pygame.K_SPACE:
                 if bullet_state is "ready":
-                    bulletSound = mixer.Sound("laser.wav")
+                    bulletSound = mixer.Sound(r"C:\Users\divya\OneDrive\Desktop\Spring 2023\CS581\laser.wav")
                     bulletSound.play()
                     # Get the current x cordinate of the spaceship
                     bulletX = playerX
@@ -164,7 +164,7 @@ while running:
         # Collision
         collision = isCollision(enemy_x, enemy_y, bulletX, bulletY)
         if collision:
-            explosionSound = mixer.Sound("explosion.wav")
+            explosionSound = mixer.Sound(r"C:\Users\divya\OneDrive\Desktop\Spring 2023\CS581\explosion.wav")
             explosionSound.play()
             bulletY = 480
             bullet_state = "ready"
