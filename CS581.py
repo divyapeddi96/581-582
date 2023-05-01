@@ -102,6 +102,11 @@ def isCollision(enemyX, enemyY, bulletX, bulletY):
     else:
         return False
 
+# Define a dictionary mapping keys to movements
+key_to_movement = {
+    pygame.K_LEFT: -5,
+    pygame.K_RIGHT: 5
+}
 
 # Game Loop
 running = True
