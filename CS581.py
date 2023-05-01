@@ -38,9 +38,8 @@ enemyImg = []
 enemyX = []
 enemyY = []
 ENEMY_SPEED = 4
-enemyX_change = []
-enemyY_change = []
 num_of_enemies = 6
+enemy_speed = ENEMY_SPEED
 
 for i in range(num_of_enemies):
     enemyImg.append(pygame.image.load(r"C:\Users\divya\OneDrive\Desktop\Spring 2023\CS581\enemy.png")).convert()
