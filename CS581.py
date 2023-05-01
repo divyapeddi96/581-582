@@ -90,7 +90,6 @@ def enemy(x, y, i):
 
 
 def fire_bullet(x, y):
-    global bullet_state
     bullet_state = "fire"
     screen.blit(bulletImg, (x + 16, y + 10))
 
