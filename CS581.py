@@ -1,5 +1,6 @@
 import math
 import random
+import sys
 
 import pygame
 from pygame import mixer
@@ -118,7 +119,8 @@ while running:
     screen.blit(background, (0, 0))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
+            pygame.quit()
+            sys.exit()
 
         # if keystroke is pressed check whether its right or left
         if event.type == pygame.KEYDOWN:
