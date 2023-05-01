@@ -46,6 +46,7 @@ for i in range(num_of_enemies):
     enemyX.append(random.randint(0, 736))
     enemyY.append(random.randint(50, 150))
 
+
 # Bullet
 
 # Ready - You can't see the bullet on the screen
@@ -177,10 +178,9 @@ while running:
     if bulletY <= 0:
         bulletY = 480
         bullet_state = "ready"
-
-    if bullet_state is "fire":
-        fire_bullet(bulletX, bulletY)
+    else:
         bulletY -= bulletY_change
+        fire_bullet(bulletX, bulletY)
 
     player(playerX, playerY)
     show_score(textX, testY)
