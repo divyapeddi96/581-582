@@ -144,7 +144,7 @@ while running:
         playerX = 736
 
     # Enemy Movement
-    
+
     for i, (enemy_x, enemy_y) in enumerate(zip(enemyX, enemyY)):
     # Game Over
         if enemy_y > 440:
@@ -162,7 +162,7 @@ while running:
             enemyY[i] += 40
 
         # Collision
-        collision = isCollision(enemyX[i], enemyY[i], bulletX, bulletY)
+        collision = isCollision(enemy_x, enemy_y, bulletX, bulletY)
         if collision:
             explosionSound = mixer.Sound("explosion.wav")
             explosionSound.play()
